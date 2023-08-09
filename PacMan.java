@@ -52,10 +52,9 @@ public class PacMan extends Model implements Moveable {
 			pacman_datamap[startx] [starty] = 0;
 			pacman_datamap[initialx] [initialy] = 3;
 			startx = initialx; 
-		    starty = initialy;
-		    --life;
-
-		    PacManDeath();
+		    	starty = initialy;
+		    	--life;
+			PacManDeath();
 		    
 			break;
 		default:
@@ -95,11 +94,9 @@ public class PacMan extends Model implements Moveable {
 			pacman_datamap[startx] [starty] = 0 ;
 			pacman_datamap[initialx] [initialy] = 3;
 			startx = initialx; 
-		    starty = initialy;
-		    --life;
-
-		    PacManDeath();
-			
+		    	starty = initialy;
+		    	--life;
+			PacManDeath();
 			break;
 		default:
 			break;
@@ -129,12 +126,9 @@ public class PacMan extends Model implements Moveable {
 					pacman_datamap[startx] [starty] = 0 ;
 					pacman_datamap[initialx] [initialy] = 3;
 					startx = initialx; 
-				    starty = initialy;
-
-				    --life;
-				    PacManDeath();
-				    
-					
+				    	starty = initialy;
+					--life;
+					PacManDeath();
 					break;
 				default:
 					break;
@@ -145,7 +139,6 @@ public class PacMan extends Model implements Moveable {
 		// was ist links von mir?
 		int value = pacman_datamap[startx-1] [starty];
 				switch (value) {
-			
 				case 0:
 					pacman_datamap[startx] [starty] = 0 ;
 					pacman_datamap[--startx] [starty] = 3;
@@ -165,16 +158,14 @@ public class PacMan extends Model implements Moveable {
 					pacman_datamap[startx] [starty] = 0 ;
 					pacman_datamap[initialx] [initialy] = 3;
 					startx = initialx; 
-				    starty = initialy;
-
-				    --life;
-				    PacManDeath();
+				    	starty = initialy;
+					--life;
+				    	PacManDeath();
 					break;
 				default:
 					break;
 			}
 	}
-
 	/**
 	 * Checks if Pacman is dead and closes the program if so.
 	 */
